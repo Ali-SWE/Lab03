@@ -17,7 +17,7 @@ public class Sorter {
         }
     }
 
-    public static void insertionSort(int array[]) {  
+    public static void insertionSort(int[] array) {  
 
         int n = array.length;  
         for (int j = 1; j < n; j++) {  
@@ -27,11 +27,16 @@ public class Sorter {
             while ( (i > -1) && ( array [i] > key ) ) { 
 
                 array [i+1] = array [i];  
-                i--;  
+                i--; 
+
             }  
 
             array[i+1] = key;  
         } 
+    }
+
+    public static void sort(int[] array){
+        insertionSort(array);
     }
 }
 
